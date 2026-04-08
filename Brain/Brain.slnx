@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Brain.Api/Brain.Api.csproj" />
+  <Project Path="Brain.Cli/Brain.Cli.csproj" />
+  <Project Path="Brain.Core/Brain.Core.csproj" />
+  <Project Path="Brain.InfraEstrutura/Brain.InfraEstrutura.csproj" />
+</Solution>
