@@ -1,0 +1,12 @@
+O projeto do Assistente é um projeto de segundo cerebro humano, tem objetivo de caputar
+dados em texto, audio e video e facilitar a pesquisa para utilização posterior.
+Alem disso o assistente será um auxiliar de desenvolvimento de software, tera uma interface
+de linha de comando chamado de brain, que realiza as tarefas, nessa versao deverá incluir e pesquisar 
+as anotações.
+
+Arquitetura
+Sera desenvolvido em dotnet
+A Brain.Api será api responsavel por responder as requisicoes, deve ser segura.
+Seguindo as convenções do dotnet, devera existir um projeto Brain.Core que conterá as interfaces e classes
+Seguindo as convenções do dotnet, devera existir um projeto Brain.InfraEstrutura que contera as implementações de acesso ao banco de dados postgre
+Seguindo as convenções do dotnet, devera existir um projeto Brain.Api que contera as implementações necessárias para aceitar as requisições.
