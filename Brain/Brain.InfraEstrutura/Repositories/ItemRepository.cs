@@ -1,3 +1,6 @@
+using Brain.Core.Entities;
+using Brain.Core.Interfaces;
+using Brain.InfraEstrutura.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +21,12 @@ namespace Brain.InfraEstrutura.Repositories
 
         public async Task<Item?> GetByIdAsync(int id)
         {
-            return await _context.Items.FindAsync(id);
+            return await _context.Itens.FindAsync(id);
         }
 
         public async Task<IEnumerable<Item>> GetAllAsync()
         {
-            return await _context.Items.ToListAsync();
+            return await _context.Itens.ToListAsync();
         }
 
         public async Task AddAsync(Item item)
@@ -31,7 +34,7 @@ namespace Brain.InfraEstrutura.Repositories
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
 
-            _context.Items.Add(item);
+            _context.Itens.Add(item);
             await _context.SaveChangesAsync();
         }
 
@@ -46,10 +49,10 @@ namespace Brain.InfraEstrutura.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var item = await _context.Items.FindAsync(id);
+            var item = await _context.Itens.FindAsync(id);
             if (item != null)
             {
-                _context.Items.Remove(item);
+                _context.Itens.Remove(item);
                 await _context.SaveChangesAsync();
             }
         }
