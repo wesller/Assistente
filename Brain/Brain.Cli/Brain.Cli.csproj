@@ -5,6 +5,12 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>brain</AssemblyName> <!-- Define o nome do executável final como brain.exe -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier> <!-- Define o runtime para Windows de 64 bits -->
+    <SelfContained>true</SelfContained> <!-- Torna o executável autocontido, incluindo o runtime -->
+    <PublishSingleFile>true</PublishSingleFile> <!-- Publica como um único arquivo executável -->
+    <PublishTrimmed>true</PublishTrimmed> <!-- Reduz o tamanho do executável removendo código não utilizado -->
+    <PublishReadyToRun>true</PublishReadyToRun> <!-- Otimiza o tempo de inicialização -->
   </PropertyGroup>
 
   <ItemGroup>
