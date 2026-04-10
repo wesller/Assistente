@@ -1,2 +1,5 @@
 # Executar o aider
-uvx --from aider-chat aider.exe --model ollama_chat/codellama:latest
+uvx --from aider-chat aider.exe --model ollama_chat/qwen2.5-coder:7b
+
+
+
