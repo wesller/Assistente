@@ -41,9 +41,13 @@ addCommand.SetHandler(async (context) =>
             Console.WriteLine($"Erro ao adicionar item: {response.StatusCode} - {errorContent}");
         }
     }
+    catch (HttpRequestException httpEx)
+    {
+        Console.WriteLine("API está desligada.");
+    }
     catch (Exception ex)
     {
-        Console.WriteLine($"Ocorreu um erro: {ex.Message}");
+        Console.WriteLine($"Ocorreu um erro inesperado: {ex.Message}");
     }
 });
 
