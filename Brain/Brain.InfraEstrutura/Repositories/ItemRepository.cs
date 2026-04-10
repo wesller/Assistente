@@ -1,6 +1,3 @@
-using Brain.Core.Entities;
-using Brain.Core.Interfaces;
-using Brain.InfraEstrutura.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
