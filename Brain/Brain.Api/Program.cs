@@ -45,7 +45,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
 app.MapPost("/itens", async (Item item, IItemRepository repository) =>
 {
     await repository.AddAsync(item);

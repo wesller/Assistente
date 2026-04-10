@@ -1,4 +1,4 @@
-﻿using System.CommandLine;
+using System.CommandLine;
 using System.CommandLine.Invocation;
 using Brain.Core.Entities; // Para a entidade Item
 using System.Net.Http.Json; // Adicionado para PostAsJsonAsync
