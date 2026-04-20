@@ -30,7 +30,7 @@ else
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString, b => b.MigrationsAssembly("Brain.Api")));
 
-builder.Services.AddScoped<IItemRepository, ItemRepository>();
+builder.Services.AddScoped<IGenericRepository<Item>, GenericRepository<Item>>();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -43,11 +43,11 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
-app.MapPost("/itens", async (Item item, IItemRepository repository) =>
+app.MapPost("/itens", async (Item item, IGenericRepository<Item> repository) =>
 {
-    await repository.AddAsync(item);
+    await repository.Add(item);
     return Results.Created($"/itens/{item.Id}", item);
 })
 .WithName("CreateItem");

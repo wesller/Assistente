@@ -1,22 +1,17 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Brain.Core.Entities;
 
-/// <summary>
-/// Representa um item armazenado no banco de dados.
-/// </summary>
 public class Item
 {
-    /// <summary>
-    /// Identificador único (Auto-incrementado no banco de dados).
-    /// </summary>
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-    /// <summary>
-    /// Título do item.
-    /// </summary>
+    [MaxLength(255)]
     public string Titulo { get; set; } = string.Empty;
 
-    /// <summary>
-    /// Descrição detalhada do item.
-    /// </summary>
+    [Column(TypeName = "text")]
     public string Descricao { get; set; } = string.Empty;
 }

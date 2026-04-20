@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Brain.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "a \"teste\" \"aaaaaaaaa\""
+    }
+  }
+}
