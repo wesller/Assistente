@@ -1,4 +1,4 @@
-﻿using Brain.Core.Interfaces;
+using Brain.Core.Interfaces;
 using Brain.InfraEstrutura.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -22,6 +22,11 @@ namespace Brain.InfraEstrutura.Repositories
         {
             await _dbSet.AddAsync(dados);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<T>> GetAll()
+        {
+            return await _dbSet.ToListAsync();
         }
 
         public Task Delete(int id)

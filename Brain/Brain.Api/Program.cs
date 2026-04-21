@@ -52,4 +52,11 @@ app.MapPost("/itens", async (Item item, IGenericRepository<Item> repository) =>
 })
 .WithName("CreateItem");
 
+app.MapGet("/itens", async (IGenericRepository<Item> repository) =>
+{
+    var itens = await repository.GetAll();
+    return Results.Ok(itens);
+})
+.WithName("GetItems");
+
 app.Run();
